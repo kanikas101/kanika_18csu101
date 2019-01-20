@@ -1,34 +1,45 @@
-import java.util.*;
-import java.lang.Math;
+  import java.util.*;
 class program2
 {
-	public static void main(String args[])
-	{
-	int a,b,c,d,root1,root2;
+public static void main(String args[])
+{
+	int num;
+	char ch='y';
 	Scanner scan=new Scanner(System.in);
-	System.out.println("given equation ax^2+bx+c ");
-	System.out.print("enter a: ");
-	a=scan.nextInt();
-	System.out.print("enter b: ");
-	b=scan.nextInt();
-	System.out.print("enter c: ");
-	c=scan.nextInt();
-	d=b*b-4*a*c;
-	if(d>0)
-	{
-	System.out.println("Roots are real and unequal");
-    root1 = (-b + Math.sqrt(d));
-    root2 = (-b - Math.sqrt(d))/(2*a);
-    System.out.println("root 1= "+root1);
-    System.out.println("root 2= "+root2);
-	}
-	else if(d==0)
-	{
-	System.out.println("Roots are real and equal");
-	root1=(-b + Math.sqrt(d)) / (2*a);
-	System.out.println("root = "+root1);
-	}
-	else
-	System.out.println("Roots are imaginary");
-	}
+while(ch=='y')
+{
+	System.out.println("enter number between 1 and 12 : ");
+    num=scan.nextInt();
+    switch(num)
+    {
+    case 1:System.out.println("January");
+           break;
+    case 2:System.out.println("February");
+           break;
+    case 3:System.out.println("March");
+           break;
+    case 4:System.out.println("April");
+           break;
+    case 5:System.out.println("May");
+           break;
+    case 6:System.out.println("June");
+           break;
+    case 7:System.out.println("July");
+           break;
+    case 8:System.out.println("August");
+           break;
+    case 9:System.out.println("September");
+           break;
+    case 10:System.out.println("October");
+           break;
+    case 11:System.out.println("November");
+           break;
+    case 12:System.out.println("December");
+           break;
+    default:System.out.println("ERROR:INVALID CHOICE! ENTER NUMBER BETWEEN 1 AND 12");
+    }
+    System.out.println("Do you wish to continue? (enter y for YES) ");
+    ch=scan.next().charAt(0);
+    }
+}
 }
