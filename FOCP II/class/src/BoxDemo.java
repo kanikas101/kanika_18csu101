@@ -39,5 +39,6 @@ Box myBox1= new Box();
 myBox1.setDim();
 double volume=myBox1.volume();
 System.out.println("volume= "+volume);
+System.out.println(myBox instanceof Box);
 }
 }
